@@ -232,11 +232,12 @@ function formatValue(ctx, value, recurseTimes) {
   }
 
   // Look up the keys of the object.
-  var keys = Object.keys(value);
+  var filterFn = ctx.filter || function() { return true };
+  var keys = Object.keys(value).filter(filterFn);
   var visibleKeys = arrayToHash(keys);
 
   if (ctx.showHidden) {
-    keys = Object.getOwnPropertyNames(value);
+    keys = Object.getOwnPropertyNames(value).filter(filterFn);
   }
 
   // IE doesn't make error fields non-enumerable
