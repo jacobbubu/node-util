@@ -3,11 +3,9 @@
     "name": "Joyent",
     "url": "http://www.joyent.com"
   },
-  "name": "util",
+  "name": "@nxmix/util",
   "description": "Node.JS util module",
-  "keywords": [
-    "util"
-  ],
+  "keywords": ["util"],
   "version": "0.10.3",
   "homepage": "https://github.com/defunctzombie/node-util",
   "repository": {
@@ -15,10 +13,7 @@
     "url": "git://github.com/defunctzombie/node-util"
   },
   "main": "./util.js",
-  "files": [
-    "util.js",
-    "support"
-  ],
+  "files": ["util.js", "support"],
   "scripts": {
     "test": "node test/node/*.js && zuul test/browser/*.js"
   },
